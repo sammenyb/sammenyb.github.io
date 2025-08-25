@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
+  <title>Samuel Nyberg & Tobias Mattsson | Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,14 +13,27 @@
       color: #222;
     }
     header {
-      background: linear-gradient(90deg, #4776E6, #8e54e9);
+      position: relative;
+      background: url('media/header-bg.webp') center/cover no-repeat;
       color: white;
       padding: 3rem 1rem 2rem 1rem;
       text-align: center;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #4776E6cc, #8d54e9cc); /* cc = ~80% opacity */
+      pointer-events: none;
+      z-index: 0;
+    }
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
     header img {
-      width: 120px;
-      border-radius: 50%;
+      width: 160px;
+      border-radius: 12px;
       border: 4px solid #fff;
       margin-bottom: 1rem;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
@@ -29,6 +42,12 @@
       margin: 0.2em 0 0.3em 0;
       font-size: 2.5em;
       font-weight: 700;
+    }
+    h2 {
+      margin: 0.5em 0 0.5em 0;
+      font-size: 1.5em;
+      font-weight: 500;
+      opacity: 0.95;
     }
     header p {
       font-size: 1.2em;
@@ -41,7 +60,7 @@
     }
     .work-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
     @media(max-width: 700px) {
@@ -81,44 +100,218 @@
       color: #888;
       margin-top: 2rem;
     }
+
+    .pdf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+      justify-content: center;
+    }
+    .pdf-card {
+      min-width: 0;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(71,118,230,0.07);
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-title {
+      font-weight: 600;
+      color: #4776E6;
+      margin: 0.7em 0 0.3em 0;
+    }
+    .pdf-link {
+      color: #8e54e9;
+      text-decoration: none;
+      margin-top: 0.2em;
+      font-weight: 500;
+      font-size: 1em;
+    }
+    @media (max-width: 800px) {
+      .pdf-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .pdf-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2em;
+      }
+      .pdf-preview {
+        display: none !important;
+      }
+      .pdf-card {
+        padding: 1em 0.5em;
+      }
+    }
+
+
   </style>
 </head>
 <body>
   <header>
-    <img src="https://avatars.githubusercontent.com/u/your-github-id?v=4" alt="Your Avatar">
-    <h1>Your Name</h1>
-    <p>Short bio goes here – who you are, what you do, what drives you.</p>
-  </header>
-  <section>
-    <h2>Selected Works</h2>
-    <div class="work-list">
-      <div class="work">
-        <div class="work-title">Project One</div>
-        <div class="work-desc">Brief description of your project, what it does, and why it's cool.</div>
-        <div class="work-links">
-          <a href="https://github.com/yourusername/project-one" target="_blank">Code</a>
-          <a href="https://project-one-demo.com" target="_blank">Live Demo</a>
+    <h1>Samuel Nyberg and Tobias Mattsson</h1>
+    <p>BSc Computer Science Students | Computer Vision Enthusiasts</p>
+    <p style="font-size:1.1em; max-width:600px; margin:1em auto 2.5em auto; opacity:0.85;">
+      We are passionate about AI and Computer Vision. This portfolio highlights our major project, developed as part of our education.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3em; align-items: flex-start; padding-bottom: 1.5em;">
+      <!-- Samuel Profile -->
+      <div style="flex: 1 1 260px; min-width: 240px; max-width: 320px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(71,118,230,0.07); padding: 1.5em; text-align: center;">
+        <img src="media/samuel.jpg" alt="Samuel Nyberg" style="width:90px; height:90px; border-radius:50%; border:3px solid #4776E6; margin-bottom:0.8em; object-fit:cover;">
+        <h3 style="margin:0.2em 0 0.4em 0; color:#4776E6;">Samuel Nyberg</h3>
+        <p style="font-size:0.98em; color:#444; margin-bottom:1em;">
+          Final year Computer Science student focused on AI and software engineering. Experienced in Python, C++, and computer vision frameworks.
+          Previously worked on fingerprinting and login security, as well as Linux development and .NET programming. 
+        </p>
+        <div style="font-size:0.97em; margin-bottom:0.5em; margin-left: -3em;">
+          <strong>Email:</strong> <a href="mailto:sany21@student.bth.se">sany21@student.bth.se</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/samuel-n-20426619a/" target="_blank" style="color:#8e54e9; text-decoration:none; margin-right:1em;">LinkedIn</a>
+          <a href="https://github.com/sammenyb" target="_blank" style="color:#8e54e9; text-decoration:none;">GitHub</a>
         </div>
       </div>
-      <div class="work">
-        <div class="work-title">Project Two</div>
-        <div class="work-desc">Another project description. Highlight your role and technologies used.</div>
-        <div class="work-links">
-          <a href="https://github.com/yourusername/project-two" target="_blank">Code</a>
+      <!-- Tobias Profile -->
+      <div style="flex: 1 1 260px; min-width: 240px; max-width: 320px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(71,118,230,0.07); padding: 1.5em; text-align: center;">
+        <img src="media/tobias.jpg" alt="Tobias Mattsson" style="width:90px; height:90px; border-radius:50%; border:3px solid #8e54e9; margin-bottom:0.8em; object-fit:cover;">
+        <h3 style="margin:0.2em 0 0.4em 0; color:#8e54e9;">Tobias Mattsson</h3>
+        <p style="font-size:0.98em; color:#444; margin-bottom:1em;">
+          Enthusiastic about machine learning and data science. Skilled in Python, data analysis, and deep learning model development.
+        </p>
+        <div style="font-size:0.97em; margin-bottom:0.5em; margin-left: -3em;">
+          <strong>Email:</strong> <a href="mailto:tomt21@student.bth.se">tomt21@student.bth.se</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/tobias-mattsson-7a8894230/" target="_blank" style="color:#8e54e9; text-decoration:none; margin-right:1em;">LinkedIn</a>
+          <a href="https://github.com/Klattraren" target="_blank" style="color:#8e54e9; text-decoration:none;">GitHub</a>
         </div>
       </div>
-      <!-- Add more work blocks as needed -->
     </div>
-  </section>
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a> | 
-      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+  </header>
+  <section> 
+    <h1>Master Thesis Work</h1>
+    <p style="font-size:1.1em; line-height:1.6; max-width:800px; opacity:0.9;">
+      We are two students from Blekinge Institute of Technology (BTH) who are entering our fifth and final year of our degree of Master of Science in Engineering. 
+      During our time at BTH, we have had a particular interest in the automotive industry, specifically the field of Autonomous Vehicles. Thus, we focus most of our project on this field of study.
+      <br><br>
+      We are looking for an opportunity to do our master's thesis work in collaboration with a company within the field of Autonomous Vehicles and Computer Vision. 
+      Although our main interest is Autonomous Technology, we are open to projects in similar fields, such as satellite imagery, object detection, etc.
+      We welcome any opportunity to collaborate, please contact us if you have a thesis project or partnership in mind.
     </p>
   </section>
+  
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <div class="work" style="padding:2.5rem 2rem;">
+      
+      <h2 style="margin-top:0; font-size:1.5em; font-weight:500; opacity:0.95;">
+        <a href="https://github.com/Klattraren/Vulnerabilities-in-Autonomous-Drive-Systems-Focusing-on-Traffic-Light-Classification" target="_blank" style="display:inline-block; color:#4776E6; text-decoration:underline;">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:1.3em; height:1.3em; vertical-align:middle; border-radius:3px; margin-bottom: 0.2em;">
+          Security Project Focused on Computer Vision
+        </a>
+      </h2>
+      <div style="text-align:center; margin-bottom:1.5em;">
+        
+        <div id="videoContainer">
+          <video id="projectVideo" controls style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+            <source src="media/attack_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div style="display: flex; flex-direction: column; align-items: center; margin-top:0.5em; margin-bottom:1em;">
+            <div id="videoLabel" style="color:#4776E6; font-weight:500; margin-bottom:0.7em;">
+              Attack with Adversarial Stickers. As can be seen, the model predicts red lights as green, which could become dangerous in a real-life scenario.
+            </div>
+            <button id="toggleVideoBtn" style="background:#4776E6; color:#fff; border:none; border-radius:6px; padding:0.5em 1.2em; font-size:1em; cursor:pointer;">
+              Show Results After Defense
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-desc">
+        This project demonstrates the vulnerabilities in a self-driving system, focusing on traffic light detection and classification. <br><br>
+        <strong>Key Points:</strong>
+        <ul style="margin:0.5em 0 0 1.2em; padding:0;">
+          <li>Creation of a traffic light detection and classification model using TensorFlow</li>
+          <li>Injection of adversarial stickers to manipulate traffic light recognition</li>
+          <li>Attack on traffic light classification using adversarial stickers</li>
+          <li>Defense strategies to improve model robustness</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const toggleBtn = document.getElementById('toggleVideoBtn');
+      const video = document.getElementById('projectVideo');
+      const videoLabel = document.getElementById('videoLabel');
+      let showingBefore = true;
+      toggleBtn.addEventListener('click', function() {
+        if (showingBefore) {
+          video.querySelector('source').src = 'media/defense.mp4';
+          video.load();
+          videoLabel.textContent = 'Attack Results after Applying Defense measures';
+          toggleBtn.textContent = 'Show Regular Attack';
+        } else {
+          video.querySelector('source').src = 'media/attack_video.mp4';
+          video.load();
+          videoLabel.textContent = 'Attack Results with Adversarial Stickers';
+          toggleBtn.textContent = 'Show Results After Defense';
+        }
+        showingBefore = !showingBefore;
+      });
+    </script>
+  </section>
+
+  <section>
+    <h1>Project Reports &amp; Documents</h1>
+    <div class="pdf-grid">
+      <!-- Säkerhetsrapport -->
+      <div class="pdf-card">
+        <div class="pdf-preview">
+          <iframe src="media/Vulnerabilities_in_Autonomous_Drive_Systems.pdf#toolbar=0" width="100%" height="180" style="border-radius:8px; border:1px solid #eee;"></iframe>
+        </div>
+        <div class="pdf-title">Vulnerabilities in Autonomous Drive Systems
+        Focusing on Traffic Light Classification
+        </div>
+        <a href="media/Vulnerabilities_in_Autonomous_Drive_Systems.pdf" target="_blank" class="pdf-link">Open PDF</a>
+      </div>
+      <!-- Etikrapport -->
+      <div class="pdf-card">
+        <div class="pdf-preview">
+          <iframe src="media/Etik_Rapport.pdf#toolbar=0" width="100%" height="180" style="border-radius:8px; border:1px solid #eee;"></iframe>
+        </div>
+        <div class="pdf-title">Ethical Dilemma Surrounding Responsibility When Operating Autonomous Vehicles</div>
+        <a href="media/Etik_Rapport.pdf" target="_blank" class="pdf-link">Open PDF</a>
+      </div>
+      <!-- Forskningsmetodik -->
+      <div class="pdf-card">
+        <div class="pdf-preview">
+          <iframe src="media/Forskningsmetodik_DV2657-1.pdf#toolbar=0" width="100%" height="180" style="border-radius:8px; border:1px solid #eee;"></iframe>
+        </div>
+        <div class="pdf-title">Systematic literature review of driver monitoring system, fatigue
+        detection, and accident prevention using AI
+        </div>
+        <a href="media/Forskningsmetodik_DV2657-1.pdf" target="_blank" class="pdf-link">Open PDF</a>
+      </div>
+      <!-- Deeplearning -->
+      <div class="pdf-card">
+        <div class="pdf-preview">
+          <iframe src="media/Deeplearning_Project_Report.pdf#toolbar=0" width="100%" height="180" style="border-radius:8px; border:1px solid #eee;"></iframe>
+        </div>
+        <div class="pdf-title">Traffic Veichle Detection & Classifiaction</div>
+        <a href="media/Deeplearning_Project_Report.pdf" target="_blank" class="pdf-link">Open PDF</a>
+      </div>
+    </div>
+
+  </section>
+
+
   <footer>
-    &copy; 2025 Your Name. Built with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+    <div style="margin-top:1.5em; color:#aaa; font-size:0.95em; text-align:center;">
+      &copy; 2025 Samuel Nyberg &amp; Tobias Mattsson. Built with <a href="https://pages.github.com/" target="_blank" style="color:#8e54e9;">GitHub Pages</a>.
+    </div>
   </footer>
 </body>
 </html>
