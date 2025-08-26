@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Samuel Nyberg & Tobias Mattsson | Portfolio</title>
+  <title>Previous Work Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,7 +14,7 @@
     }
     header {
       position: relative;
-      background: url('media/header-bg.webp') center/cover no-repeat;
+      background: url('media/header_bg.webp') center/cover no-repeat;
       color: white;
       padding: 3rem 1rem 2rem 1rem;
       text-align: center;
@@ -164,7 +164,8 @@
         <img src="media/samuel.jpg" alt="Samuel Nyberg" style="width:90px; height:90px; border-radius:50%; border:3px solid #4776E6; margin-bottom:0.8em; object-fit:cover;">
         <h3 style="margin:0.2em 0 0.4em 0; color:#4776E6;">Samuel Nyberg</h3>
         <p style="font-size:0.98em; color:#444; margin-bottom:1em;">
-          Final year Computer Science student focused on AI and software engineering. Experienced in Python, C++, and computer vision frameworks.
+          Final year Computer Science student with a passion for AI and computer vision. 
+          Experienced in Python, C++, and computer vision frameworks.
           Previously worked on fingerprinting and login security, as well as Linux development and .NET programming. 
         </p>
         <div style="font-size:0.97em; margin-bottom:0.5em; margin-left: -3em;">
@@ -180,7 +181,9 @@
         <img src="media/tobias.jpg" alt="Tobias Mattsson" style="width:90px; height:90px; border-radius:50%; border:3px solid #8e54e9; margin-bottom:0.8em; object-fit:cover;">
         <h3 style="margin:0.2em 0 0.4em 0; color:#8e54e9;">Tobias Mattsson</h3>
         <p style="font-size:0.98em; color:#444; margin-bottom:1em;">
-          Enthusiastic about machine learning and data science. Skilled in Python, data analysis, and deep learning model development.
+          Final year Computer Science student focused on AI and software engineering. 
+          Enthusiastic about machine learning and data science, with hands-on experience in autonomous driving projects. 
+          Skilled in Python, data analysis, and developing deep learning models.
         </p>
         <div style="font-size:0.97em; margin-bottom:0.5em; margin-left: -3em;">
           <strong>Email:</strong> <a href="mailto:tomt21@student.bth.se">tomt21@student.bth.se</a>
@@ -203,10 +206,12 @@
       We welcome any opportunity to collaborate, please contact us if you have a thesis project or partnership in mind.
     </p>
   </section>
+
+  <br>
   
   <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <h1>Highlighted Projects</h1>
     <div class="work" style="padding:2.5rem 2rem;">
-      
       <h2 style="margin-top:0; font-size:1.5em; font-weight:500; opacity:0.95;">
         <a href="https://github.com/Klattraren/Vulnerabilities-in-Autonomous-Drive-Systems-Focusing-on-Traffic-Light-Classification" target="_blank" style="display:inline-block; color:#4776E6; text-decoration:underline;">
           <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:1.3em; height:1.3em; vertical-align:middle; border-radius:3px; margin-bottom: 0.2em;">
@@ -251,7 +256,7 @@
         if (showingBefore) {
           video.querySelector('source').src = 'media/defense.mp4';
           video.load();
-          videoLabel.textContent = 'Attack Results after Applying Defense measures';
+          videoLabel.textContent = 'Attack Results after Applying Defense Measures';
           toggleBtn.textContent = 'Show Regular Attack';
         } else {
           video.querySelector('source').src = 'media/attack_video.mp4';
@@ -264,8 +269,68 @@
     </script>
   </section>
 
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <div class="work" style="padding:2.5rem 2rem;">
+      <h2 style="margin-top:0; font-size:1.5em; font-weight:500; opacity:0.95;">
+        <a href="https://github.com/sammenyb/Robotics-ET2636" target="_blank" style="display:inline-block; color:#4776E6; text-decoration:underline;">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:1.3em; height:1.3em; vertical-align:middle; border-radius:3px; margin-bottom: 0.2em;">
+          Robot Swarm algorithm combined with computer vision
+        </a>
+      </h2>
+      <div style="text-align:center; margin-bottom:1.5em;">
+        
+        <div id="videoContainer">
+          <img src="media/robots.png" alt="Robots Project" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:100%; height:300px; object-fit:cover;">
+
+        </div>
+      </div>
+
+      <div class="work-desc">
+        This project showcases robots using computer vision together with a Particle Swarm Optimization (PSO) algorithm to collaboratively navigate around obstacles as a group. <br><br>
+        <strong>Key Points:</strong>
+        <ul style="margin:0.5em 0 0 1.2em; padding:0;">
+          <li>Implementation of Particle Swarm Optimization (PSO) for robot navigation</li>
+          <li>Training a YOLO model to recognize robots and obstacles</li>
+          <li>Collaborative behavior among multiple robots</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <div class="work" style="padding:2.5rem 2rem;">
+      <h2 style="margin-top:0; font-size:1.5em; font-weight:500; opacity:0.95;">
+        <a href="https://github.com/Klattraren/Traffic-Veichle-Detection-Classifiaction-Deeplearning-Course" target="_blank" style="display:inline-block; color:#4776E6; text-decoration:underline;">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:1.3em; height:1.3em; vertical-align:middle; border-radius:3px; margin-bottom: 0.2em;">
+          Traffic Vehicle Detection and Classification
+        </a>
+      </h2>
+      <div style="text-align:center; margin-bottom:1.5em;">
+        
+        <div id="videoContainer">
+          <img src="media/image_toy_car.png" alt="Robots Project" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.08); width:100%; height:300px; object-fit:cover;">
+
+        </div>
+      </div>
+
+      <div class="work-desc">
+        In this project, we developed an image detection and classification model from scratch, without using pre-trained models. 
+        The model was trained to detect and classify different types of vehicles in traffic scenes.
+        <br><br>
+        <strong>Key Points:</strong>
+        <ul style="margin:0.5em 0 0 1.2em; padding:0;">
+          <li>Development of a custom image detection and classification model</li>
+            <li>Trained on different types of traffic scenes</li>
+            <li>Tested how well the model finds and classifies vehicles</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
   <section>
-    <h1>Project Reports &amp; Documents</h1>
+    <h1>Project Reports</h1>
     <div class="pdf-grid">
       <!-- Säkerhetsrapport -->
       <div class="pdf-card">
